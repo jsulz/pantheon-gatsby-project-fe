@@ -5,7 +5,7 @@ import Footer from "./footer"
 const Layout = ({ isHomePage, children }) => {
   const {
     wp: {
-      generalSettings: { title },
+      generalSettings: { title, description },
     },
   } = useStaticQuery(graphql`
     query LayoutQuery {
@@ -34,11 +34,16 @@ const Layout = ({ isHomePage, children }) => {
                 <li className="my-auto" key={`key-${i}`}>
                   {/* if we're on the homepage, render site title */}
                   {to === "/" && isHomePage ? (
-                    <h1 className="my-auto">
-                      <Link className="font-bold text-black text-4xl" to="/">
-                        {parse(title)}
-                      </Link>
-                    </h1>
+                    <div>
+                      <h1 className="my-auto">
+                        <Link className="font-bold text-black text-4xl" to="/">
+                          {parse(title)}
+                        </Link>
+                      </h1>
+                      <h2 className="my-auto font-bold text-black text-xl">
+                        {parse(description)}
+                      </h2>
+                    </div>
                   ) : (
                     <Link className="text-lg font-sans" to={to}>
                       {link}
