@@ -40,7 +40,7 @@ const Layout = ({ isHomePage, children }) => {
                           {parse(title)}
                         </Link>
                       </h1>
-                      <h2 className="my-auto font-bold text-black text-2xl">
+                      <h2 className="my-auto font-bold text-black text-4xl">
                         {parse(description)}
                       </h2>
                     </div>
