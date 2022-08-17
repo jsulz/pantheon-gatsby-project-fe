@@ -1,7 +1,5 @@
 # Pantheon Decoupled Kit Gatsby WordPress Starter
 
-Test Commit to main
-
 ## Gatsby Project setup
 
 1. Clone this repo:
