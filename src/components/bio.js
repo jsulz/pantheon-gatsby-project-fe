@@ -9,8 +9,6 @@ import React from "react"
 
 const Bio = ( {authorObject}) => {
 
-  console.log(authorObject)
-
   return (
     <div className="bio">
       {authorObject.avatar.url && (
