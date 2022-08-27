@@ -13,6 +13,8 @@ import "../css/@wordpress/block-library/build-style/theme.css"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Bio from "../components/bio"
+
 
 const BlogPostTemplate = ({ data: { previous, next, post } }) => {
   const featuredImage = {
@@ -53,6 +55,8 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
 
         <hr className="mt-10" />
       </article>
+
+      <Bio authorObject={post.author.node}/>
 
       <nav className="blog-post-nav">
         <ul
@@ -101,6 +105,18 @@ export const pageQuery = graphql`
       content
       title
       date(formatString: "MMMM DD, YYYY")
+
+      author{
+        node {
+          firstName
+          lastName
+          url
+          email
+          avatar{
+            url
+          }
+        }
+      }
 
       featuredImage {
         node {
