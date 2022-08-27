@@ -13,7 +13,8 @@ import "../css/@wordpress/block-library/build-style/theme.css"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Bio from "../components/bio"
+import PostBio from "../components/post-bio"
+import CategoryList from "../components/category-list"
 
 
 const BlogPostTemplate = ({ data: { previous, next, post } }) => {
@@ -53,10 +54,12 @@ const BlogPostTemplate = ({ data: { previous, next, post } }) => {
           </section>
         )}
 
+        <CategoryList categories={post.categories.nodes}/>
+
         <hr className="mt-10" />
       </article>
 
-      <Bio authorObject={post.author.node}/>
+      <PostBio authorObject={post.author.node}/>
 
       <nav className="blog-post-nav">
         <ul
@@ -106,6 +109,7 @@ export const pageQuery = graphql`
       title
       date(formatString: "MMMM DD, YYYY")
 
+      # Adding Author
       author{
         node {
           firstName
@@ -115,6 +119,15 @@ export const pageQuery = graphql`
           avatar{
             url
           }
+        }
+      }
+
+      # Adding Categories
+      categories {
+        nodes {
+          uri
+          name
+          id
         }
       }
 
