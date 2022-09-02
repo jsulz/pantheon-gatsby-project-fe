@@ -1,5 +1,7 @@
 # Pantheon Gastby Running Log
 
+test
+
 ## Welcome
 
 This is a running log of my experiences with the Gastby SDK built with love by the Pantheon team. To see the original repository: [Pantheon Decoupled Kit Gastby WordPress Starter](https://github.com/pantheon-systems/gatsby-wordpress-starter)
