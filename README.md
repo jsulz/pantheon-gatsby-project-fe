@@ -25,3 +25,5 @@ WPGRAPHQL_URL=
 4. Run `npm run develop`
 
 5. Open a browser and navigate to `http://localhost:8000`.
+
+6. Added basic auth
