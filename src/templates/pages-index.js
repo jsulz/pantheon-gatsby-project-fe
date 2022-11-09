@@ -76,11 +76,11 @@ const PageIndexTemplate = ({ pageContext: { pages } }) => {
       }
     }
 
-    const text = getChildren(children)
+    const text = getChildren(children).toString()
 
     const excerpt = text.substring(0, 250)
     const getMarkup = () => ({
-      __html: `${excerpt}... <a href="${slug}">Contiune Reading</a>`,
+      __html: `${excerpt}... <a href="${slug}">Continue Reading</a>`,
     })
     return (
       <section className="prose lg:prose-xl pt-2">

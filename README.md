@@ -1,4 +1,4 @@
-# Pantheon Gastby Running Log
+# Pantheon Gastby Running Logs
 
 ## Welcome
 

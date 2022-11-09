@@ -8,7 +8,7 @@ const Footer = () => {
     },
   } = useStaticQuery(graphql`
     query MenuQuery {
-      wpMenu(name: { eq: "Example Menu" }) {
+      wpMenu(name: { eq: "Footer Menu" }) {
         id
         menuItems {
           nodes {
@@ -32,7 +32,7 @@ const Footer = () => {
                 className="text-blue-300 hover:text-blue-100 focus:text-purple-600 active:text-purple-300 mx-2 p-3"
                 to={`${path}`}
               >
-                ↪ {label}
+                {label}
               </Link>
             )
           })}
@@ -52,6 +52,13 @@ const Footer = () => {
               href="https://wordpress.org/"
             >
               WordPress
+            </a>{" "}
+            on{" "}
+            <a 
+              className="text-blue-200 hover:text-blue-100"
+              href="https://pantheon.io/"
+            >
+              Pantheon.io
             </a>
           </span>
         </div>
